@@ -1,0 +1,28 @@
+.bg2{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+}
+.inputs>input{
+    width: 50vw;
+    height: 7vh;
+    background-color: white;
+   
+}
+.inputs>button{
+    margin-top: 10px;
+    background-color: rgb(146, 255, 119);
+    color: rgb(0, 0, 0);
+    /* border: 1px solid rgb(133, 255, 121); */
+    border: none;
+    height: 7vh;
+    transition: all 0.5s;
+}
+.inputs>button:hover{
+    background-color: rgb(80, 255, 80);
+}

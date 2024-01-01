@@ -1,0 +1,104 @@
+.bg{
+    display: flex;
+    justify-content: center;
+     background-color: black;
+     align-items: center;
+     flex-direction: column;
+}
+.app-container{
+    margin-top: 10px;
+}
+.app-container>img{
+    height: 90vh;
+    width: 70vw;
+}
+.app-container>p{
+    color: aliceblue;
+    text-align: center;
+}
+.app-container>button{
+    background-color:white;
+    border: 2px solid rgb(180, 180, 211);
+    border-radius: 5px;
+    width: 7vw;
+    margin-left: 5px;
+    transition: all 0.5s;
+}
+.app-container>button:hover{
+    background-color: rgb(187, 247, 187);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .animation3D{
+    margin-top: 20px;
+animation-name: image;
+animation-duration: 30s;
+background-repeat: no-repeat;
+
+}
+@keyframes image{
+    0%{
+        background-image: url('../../images/first.jpeg');
+        width: 80vw;
+    height: 80vh;
+    }
+    33%{
+        background-image: url('../../images/second.jpeg');
+        width: 80vw;
+    height: 80vh;
+    
+    }
+    66%{
+        background-image: url('../../images/third.jpeg');
+        width: 80vw;
+    height: 80vh;
+    }
+    100%{
+        background-image: url('../../images/last.jpeg');
+        width: 80vw;
+    height: 80vh;
+    }
+}
+.start>form>input{
+background-color: rgb(252, 242, 233);
+width: 50vw;
+height: 7vh;
+border-radius: 10px;
+}
+.start>form>button{
+    margin-top: 10px;
+    height: 7vh;
+    transition: all 0.5s;
+}
+.start>form>button:hover{
+    background-color: rgb(124, 255, 124);
+}
+.start>form{
+    display: flex;
+    flex-direction: column;
+} */
