@@ -3,7 +3,7 @@ import React from 'react';
 function Game() {
   // Replace 'your-youtube-video-id' with the actual YouTube video ID you want to display
 
-  const embedUrl = `https://www.youtube.com/embed/bx9sXdd42M4?si=Lvyd5afUGxzkC3Jh ?autoplay=1`;
+  const embedUrl = `https://www.youtube.com/embed/vC80KSQFCgU?autoplay=1`;
 
   return (
     <div>
