@@ -5,6 +5,9 @@ import Home from './component/home/Home';
 import Navbar from './component/navbar/Navbar';
 import Age from './component/age/Age';
 import Game from './component/DemoVideo/Game';
+import Young from './component/gameType/Young';
+import Adult from './component/gameType/Adult';
+import Child from './component/gameType/Child';
 function App() {
  
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/age" element={<Age/>} />
         <Route path="/demo" element={<Game/>} />
+        <Route path="/young" element={<Young/>} />
+        <Route path="/adult" element={<Adult/>} />
+        <Route path="/child" element={<Child/>} />
       </Routes>
     </Router>
    </>

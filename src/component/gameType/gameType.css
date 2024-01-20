@@ -1,0 +1,8 @@
+.adjust{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    row-gap: 10px;
+}
