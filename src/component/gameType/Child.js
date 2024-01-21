@@ -19,7 +19,7 @@ const Child = () => {
       hoverText="Virtual Danger"
       backSideTitle="The Virtual World"
       backSideText="Engage in Virtual and Augmented Reality World!"
-      playLink="https://your-play-link2.com"
+      playLink="https://www.youtube.com/watch?v=ape4E1nQTMg"
     />
     {/* Add more instances of CustomCard with different props as needed */}
   </div>
