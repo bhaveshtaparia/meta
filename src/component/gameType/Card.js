@@ -1,24 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './gameType.css'
 
-function Card(props) {
+const CustomCard = ({ title, hoverText, backSideTitle, backSideText, playLink }) => {
   return (
-    <>
-    <div className="card text-center">
-  <div className="card-header">
-    {props.level}
-  </div>
-  <div className="card-body">
-    <h5 className="card-title">{props.title}</h5>
-    <p className="card-text">{props.description}</p>
-    <Link to="/demo" className="btn btn-primary">Play</Link>
-  </div>
-  <div className="card-footer text-muted">
-  Last Updated- 2 days ago
-  </div>
-</div>
-    </>
-  )
+    <div className="cardContainer">
+      <div className="myCard">
+        <div className="innerCard">
+          <div className="frontSide">
+            <p className="title">{title}</p>
+            <p>{hoverText}</p>
+          </div>
+          <div className="backSide">
+            <p className="title">{backSideTitle}</p>
+            <p>{backSideText}</p>
+          </div>
+        </div>
+      </div>
+      <a href={playLink} className="playButton">Play</a>
+    </div>
+  );
 }
 
-export default Card
+export default CustomCard;

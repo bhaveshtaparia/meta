@@ -1,14 +1,31 @@
-import React from 'react'
-import Card from './Card'
-import './gameType.css'
-function Child() {
-  return (
-    <div className='adjust'>
-    <Card level={"Chapter-1"} title={"Adventure 3D Game"} description={"Kill the enemy who are spreading the drugs"}/>
-    <Card level={"Chapter-2"} title={"Virtual Danger"} description={"In this section, you will learn virtually how drugs are harming you internally."}/>
+import React from 'react';
+import CustomCard from './Card';
 
-    </div>
-  )
+const Child = () => {
+  
+ 
+
+  return (
+    <div className='parent'>
+    <CustomCard
+      title="Chapter-1"
+      hoverText="Adventure 3d Game!"
+      backSideTitle="Collect the Keys"
+      backSideText="and Fight the Drug Dealers!"
+      playLink="https://youtu.be/PxJ-W39lYdM?si=mN-9s50S_SF1r0oY"
+    />
+    <CustomCard
+      title="Chapter-2"
+      hoverText="Virtual Danger"
+      backSideTitle="The Virtual World"
+      backSideText="Engage in Virtual and Augmented Reality World!"
+      playLink="https://your-play-link2.com"
+    />
+    {/* Add more instances of CustomCard with different props as needed */}
+  </div>
+    
+    
+  );
 }
 
-export default Child
+export default Child;
