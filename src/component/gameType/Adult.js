@@ -1,14 +1,31 @@
-import React from 'react'
-import Card from './Card'
-import './gameType.css'
-function Adult() {
-  return (
-    <div className='adjust'>
-    <Card level={"Chapter-1"} title={"Changer"} description={"Try to talk with Drugs Dealer and try to Change his/her mind"}/>
-    <Card level={"Chapter-2 (Metaverse) "} title={"Virtual Family"} description={"In this Section you will be the part of the Family member of That Hospitalized Person"}/>
+import React from 'react';
+import CustomCard from './Card';
 
-    </div>
-  )
+const Adult = () => {
+  
+ 
+
+  return (
+    <div className='parent'>
+    <CustomCard
+      title="Chapter-1"
+      hoverText="Help the Young"
+      backSideTitle="Counsel and Listen"
+      backSideText="Talk to the Needy!"
+      playLink="https://antidrugconsellor.vercel.app/room/abc"
+    />
+    <CustomCard
+      title="Chapter-2"
+      hoverText="A Meta-Verse Thrill"
+      backSideTitle="Be a part of the family of the Victim!"
+      backSideText="Help Him Out"
+      playLink="https://antidrugconsellor.vercel.app/room/abc"
+    />
+    {/* Add more instances of CustomCard with different props as needed */}
+  </div>
+    
+    
+  );
 }
 
-export default Adult
+export default Adult;
