@@ -16,8 +16,8 @@ function App() {
    <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/age" element={<Age/>} />
         <Route path="/demo" element={<Game/>} />
+        <Route path="/age" element={<Age/>} />
         <Route path="/young" element={<Young/>} />
         <Route path="/adult" element={<Adult/>} />
         <Route path="/child" element={<Child/>} />

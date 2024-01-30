@@ -3,18 +3,27 @@
     justify-content: center;
      background-color: black;
      align-items: center;
+     /* position: 0; */
+     z-index: 10;
+     width: 100%;
+     position: absolute;
      flex-direction: column;
-}
-.app-container{
-    margin-top: 10px;
-}
-.app-container>img{
+     top: 0%;
+    }
+    .app-container{
+        margin-top: 10px;
+    }
+    .app-container>img{
     height: 90vh;
     width: 70vw;
 }
 .app-container>p{
     color: aliceblue;
     text-align: center;
+}
+.app-container>img{
+    width: auto;
+    height: 85vh;
 }
 .app-container>button{
     background-color:white;
@@ -27,9 +36,15 @@
 .app-container>button:hover{
     background-color: rgb(187, 247, 187);
 }
-
-
-
+.btn>button{
+    background-color: rgb(175, 175, 255);
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 15vw;
+}
+.btn>button:hover{
+    background-color: rgb(143, 143, 250);
+}
 
 
 
