@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 
 const SignupPage = ({ history }) => {
+  const navigate=useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -12,13 +13,12 @@ const SignupPage = ({ history }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your signup logic here
     console.log('Signup form submitted:', formData);
     // Redirect to login page after signup
-    history.push('/login');
+    navigate('/login');
   };
 
   return (

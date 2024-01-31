@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'; 
 
 const LoginPage = ({ history }) => {
+  const navigate=useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -17,7 +18,7 @@ const LoginPage = ({ history }) => {
    
     console.log('Login form submitted:', formData);
     // Redirect to the dashboard or home page after login
-    history.push('/dashboard'); // Change this to the desired route
+    navigate('/profile'); // Change this to the desired route
   };
 
   return (
