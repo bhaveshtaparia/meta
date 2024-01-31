@@ -1,10 +1,11 @@
 import React from 'react'
-import Intro from '../intro/Intro'
+import DrugFreeSociety from './DrugFreeSociety'
 
 function Home() {
   return (
   <>
-  <Intro/>
+  <DrugFreeSociety/>
+  
   </>
   )
 }

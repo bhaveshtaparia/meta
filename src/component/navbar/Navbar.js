@@ -15,6 +15,9 @@ function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/game">Game</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Drugs Bubble</Link>
         </li>
         <li className="nav-item">

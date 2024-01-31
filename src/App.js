@@ -10,6 +10,7 @@ import Adult from './component/gameType/Adult';
 import Child from './component/gameType/Child';
 import Login from './component/auth/Login';
 import SignUp from './component/auth/SignUp';
+import Intro from './component/intro/Intro';
 function App() {
  
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/child" element={<Child/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/game" element={<Intro/>} />
       </Routes>
     </Router>
    </>
