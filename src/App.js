@@ -8,6 +8,8 @@ import Game from './component/DemoVideo/Game';
 import Young from './component/gameType/Young';
 import Adult from './component/gameType/Adult';
 import Child from './component/gameType/Child';
+import Login from './component/auth/Login';
+import SignUp from './component/auth/SignUp';
 function App() {
  
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/young" element={<Young/>} />
         <Route path="/adult" element={<Adult/>} />
         <Route path="/child" element={<Child/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<SignUp/>} />
       </Routes>
     </Router>
    </>

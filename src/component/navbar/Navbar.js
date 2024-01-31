@@ -15,6 +15,12 @@ function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Drugs Bubble</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Advice</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">About Us</Link>
         </li>
         <li className="nav-item">
@@ -23,8 +29,17 @@ function Navbar() {
        
       </ul>
       <form className="d-flex" role="search" onSubmit={(e)=>e.preventDefault()}>
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
+        {/* <button className="btn btn-outline-success" type="submit">Login</button> */}
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link>
+        </li>
+        </ul>
+        {/* <button className="btn btn-outline-success" type="submit">Sign Up</button> */}
       </form>
     </div>
   </div>
