@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'; 
-
+import {useDispatch, useSelector} from 'react-redux'
+import uri from '../../uri';
+import { login } from '../../actions/authAction';
 const LoginPage = ({ history }) => {
   const navigate=useNavigate();
+  const dispatch=useDispatch();
+  const authenticated=useSelector(state=>state.auth.isAuthenticated);
+  useEffect(()=>{
+    if(authenticated){
+     navigate('/profile');
+    }
+ },[authenticated,navigate])
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -13,12 +23,28 @@ const LoginPage = ({ history }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-   
-    console.log('Login form submitted:', formData);
-    // Redirect to the dashboard or home page after login
-    navigate('/profile'); // Change this to the desired route
+    try {
+      
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(formData)
+      };
+      const response = await fetch(`${uri}/api/v1/login`, requestOptions,{ withCredentials: true });
+      const result = await response.json();
+      if(response.ok){
+        localStorage.setItem('auth',JSON.stringify(result));
+        dispatch(login(result));
+      }else{
+        alert(result.message);
+
+      }
+    } catch (err) {
+      alert(err);
+    }
   };
 
   return (

@@ -1,24 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux'
 import './SignUp.css';
-
-const SignupPage = ({ history }) => {
+import { signup } from '../../actions/authAction';
+import uri from '../../uri';
+const SignupPage = () => {
   const navigate=useNavigate();
+  const dispatch=useDispatch();
+  const authenticated=useSelector(state=>state.auth.isAuthenticated);
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     password: '',
   });
+  useEffect(()=>{
+     if(authenticated){
+      navigate('/profile');
+     }
+  },[authenticated,navigate])
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Add your signup logic here
-    console.log('Signup form submitted:', formData);
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(formData)
+      };
+      
+      const response = await fetch(`${uri}/api/v1/register`, requestOptions);
+      const result = await response.json();
+      if(response.ok){
+        alert(result.message);
+        localStorage.setItem('auth',JSON.stringify(result));
+        dispatch(signup(result));
+      }else{
+        alert(result.message);
+      }
+    } catch (err) {
+      alert(err);
+    }
     // Redirect to login page after signup
-    navigate('/login');
   };
 
   return (
@@ -26,12 +52,12 @@ const SignupPage = ({ history }) => {
       <div className="auth-container">
         <h1>Sign up</h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="name">UserName:</label>
           <input
             type="text"
-            id="username"
-            name="username"
-            value={formData.username}
+            id="name"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             required
           />
