@@ -84,7 +84,7 @@ const handleUpvote=()=>{
         </div>
 
         <div className="visible-advice-section">
-          <h1 className="header">Anti-Drugs Advice</h1>
+          <h2 className="header">Anti-Drugs Advice</h2>
 
           
           <div>

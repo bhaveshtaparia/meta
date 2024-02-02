@@ -1,9 +1,5 @@
 /* Advice.css */
 
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
 
 .bg3 {
   background-color: #111;
@@ -27,6 +23,7 @@ body {
 }
 
 .submission-form {
+  margin-top: 30px;
   background: linear-gradient(to right, #000000, #333);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
