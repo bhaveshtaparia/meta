@@ -1,3 +1,3 @@
 
-const uri="http://localhost:5000"
+const uri="https://meta-a45t.onrender.com"
 export default uri;

@@ -1,0 +1,140 @@
+/* Advice.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.bg3 {
+  background-color: #111;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.advice-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+
+.advice-posting-section {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  /* background-color: #333; */
+}
+
+.submission-form {
+  background: linear-gradient(to right, #000000, #333);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.form-label,
+.form-input,
+.form-textarea,
+.form-button {
+  margin-bottom: 15px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.form-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #45a049;
+}
+
+.visible-advice-section {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.advice-item {
+  background: linear-gradient(to right, #000000, #333);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  flex: 0 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  transform: translateZ(5px);
+}
+
+.advice-item h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.advice-item p {
+  color: #ddd;
+}
+
+.advice-item p.upvotes {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.advice-item .advice-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.advice-item .advice-buttons button {
+  margin-right: 10px;
+}
+
+.advice-item p.date {
+  color: #bbb;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.total-coins {
+  float: right;
+  font-size: 18px;
+  color: #fff;
+}
+
+.header {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.upvote-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.upvote-button:hover {
+  background-color: #2980b9;
+}

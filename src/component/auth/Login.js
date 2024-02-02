@@ -10,7 +10,7 @@ const LoginPage = ({ history }) => {
   const authenticated=useSelector(state=>state.auth.isAuthenticated);
   useEffect(()=>{
     if(authenticated){
-     navigate('/profile');
+     navigate('/advice');
     }
  },[authenticated,navigate])
 
