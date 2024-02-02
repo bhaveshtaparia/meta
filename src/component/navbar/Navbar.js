@@ -49,13 +49,6 @@ function Navbar() {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/advice">Advice</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">About Us</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Contact Us </Link>
-        </li>
-       
       </ul>
       <form className="d-flex" role="search" onSubmit={(e)=>e.preventDefault()}>
         {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
