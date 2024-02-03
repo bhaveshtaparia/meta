@@ -12,7 +12,7 @@ const CustomCard = ({ title, hoverText, backSideText }) => {
           </div>
           <div className="backSide">
             {/* <p className="title">{backSideTitle}</p> */}
-            <img width={450} height={450} src={require(`../../images/marker/${backSideText}`)} alt='Qr'/>
+            <img width={450} height={450} style={{borderRadius:"20px"}} src={require(`../../images/marker/${backSideText}`)} alt='Qr'/>
           </div>
         </div>
         

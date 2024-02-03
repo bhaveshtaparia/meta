@@ -8,8 +8,11 @@ function Arpage() {
     title={"Marijuana"} hoverText={"marijuana.png"} backSideText={"marijuana.jpg"} 
     />
     <Imgcard 
-    title={"Cocainepowder"} hoverText={"meth.png"} backSideText={"cocainepowder.jpg"} 
+    title={"Inspired Video"} hoverText={"inspire.png"} backSideText={"cigerate.jpeg"} 
     />
+    {/* <Imgcard 
+    title={"Cocainepowder"} hoverText={"meth.png"} backSideText={"cocainepowder.jpg"} 
+    /> */}
     <Imgcard 
     title={"Meth"} hoverText={"meth.png"} backSideText={"methamphetamine.jpeg"} 
     />
