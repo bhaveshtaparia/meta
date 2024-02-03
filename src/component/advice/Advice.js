@@ -9,6 +9,7 @@ function Advice() {
   const [totalCoins, setTotalCoins] = useState(100);
   const [newAdvice, setNewAdvice] = useState({ title: '', description: '' });
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [change, setChange] = useState(false);
 const handleUpvote=()=>{
 
 }
@@ -17,7 +18,7 @@ const handleUpvote=()=>{
       .then((response) => response.json())
       .then((data) => setAdviceList(data.advice))
       .catch((error) => console.error('Error fetching advice:', error));
-  }, []); 
+  }, [change]); 
   const handleSubmission = () => {
     fetch(`${uri}/api/v1/create/advice`, {
       method: 'POST',
@@ -30,6 +31,7 @@ const handleUpvote=()=>{
       .then((response) => response.json())
       .then((data) => {
         alert(data.message);
+        setChange(!change)
       })
       .catch((error) => console.error('Error submitting advice:', error));
   };
