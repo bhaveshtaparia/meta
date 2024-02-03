@@ -35,7 +35,7 @@ const SignupPage = () => {
       const response = await fetch(`${uri}/api/v1/register`, requestOptions);
       const result = await response.json();
       if(response.ok){
-        alert(result.message);
+        // alert(result.message);
         localStorage.setItem('auth',JSON.stringify(result));
         dispatch(signup(result));
       }else{

@@ -3,13 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import './Advice.css';
 import uri from '../../uri';
+import CustomAlert from '../customAlert/CustomAlert';
 
 function Advice() {
+  const [alertMessage, setAlertMessage] = useState('');
   const [adviceList, setAdviceList] = useState([]);
   const [totalCoins, setTotalCoins] = useState(100);
   const [newAdvice, setNewAdvice] = useState({ title: '', description: '' });
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [change, setChange] = useState(false);
+  const closeAlert = () => {
+    setAlertMessage('');
+  };
 const handleUpvote=()=>{
 
 }
@@ -30,7 +35,7 @@ const handleUpvote=()=>{
     })
       .then((response) => response.json())
       .then((data) => {
-        alert(data.message);
+        setAlertMessage(data.message);
         setChange(!change)
       })
       .catch((error) => console.error('Error submitting advice:', error));
@@ -46,6 +51,7 @@ const handleUpvote=()=>{
   
   return (
     <div className="bg3">
+         <CustomAlert message={alertMessage} onClose={closeAlert} />
       <div className="advice-container">
         <div className="advice-posting-section">
       <div className="total-coins">Total Coins: {totalCoins}</div>

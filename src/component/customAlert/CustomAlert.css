@@ -1,0 +1,15 @@
+/* CustomAlert.css */
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+}

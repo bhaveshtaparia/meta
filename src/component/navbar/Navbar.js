@@ -17,10 +17,11 @@ function Navbar() {
       const result = await response.json();
       if(response.ok){
         localStorage.removeItem('auth')
-        alert(result.message);
+        // alert(result.message);
         dispatch(logout());
       }else{
         alert(result.message);
+        // console.log(result.message);
       }
     } catch (err) {
       alert(err);
