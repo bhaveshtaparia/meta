@@ -12,7 +12,7 @@ const Adult = () => {
       hoverText="Help the Young"
       backSideTitle="Counsel and Listen"
       backSideText="Talk to the Needy!"
-      playLink="https://antidrugconsellor.vercel.app/room/abc"
+      playLink="/advice"
     />
     <CustomCard
       title="Chapter-2"
