@@ -1,23 +1,22 @@
 import React from 'react';
-import './gameType.css'
+import './imgcard.css'
 import { Link } from 'react-router-dom'
-const CustomCard = ({ title, hoverText, backSideTitle, backSideText, playLink }) => {
+const CustomCard = ({ title, hoverText, backSideText }) => {
   return (
     <div className="cardContainer">
       <div className="myCard">
         <div className="innerCard">
           <div className="frontSide">
             <p className="title">{title}</p>
-            <p>{hoverText}</p>
+            <img  width={150} height={150} src={require(`../../images/qr/${hoverText}`)} alt='hoverText'/>
           </div>
           <div className="backSide">
-            <p className="title">{backSideTitle}</p>
-            <p>{backSideText}</p>
+            {/* <p className="title">{backSideTitle}</p> */}
+            <img width={450} height={450} src={require(`../../images/marker/${backSideText}`)} alt='Qr'/>
           </div>
         </div>
         
       </div>
-      <Link to={playLink} className="playButton">Play</Link>
     </div>
   );
 }

@@ -14,12 +14,13 @@ const Child = () => {
       backSideText="and Fight the Drug Dealers!"
       playLink="https://youtu.be/PxJ-W39lYdM?si=mN-9s50S_SF1r0oY"
     />
+   
     <CustomCard
       title="Chapter-2"
       hoverText="Virtual Danger"
       backSideTitle="The Virtual World"
       backSideText="Engage in Virtual and Augmented Reality World!"
-      playLink="https://www.youtube.com/watch?v=ape4E1nQTMg"
+      playLink="/ar"
     />
     {/* Add more instances of CustomCard with different props as needed */}
   </div>

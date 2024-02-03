@@ -13,6 +13,7 @@ import SignUp from './component/auth/SignUp';
 import Intro from './component/intro/Intro';
 import Advice from './component/advice/Advice';
 import DrugsDisAdvantage from './component/DrugsDisadvantage/DrugsDisadvantage';
+import Arpage from './component/arPage/Arpage';
 function App() {
  
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/game" element={<Intro/>} />
         <Route path="/advice" element={<Advice/>} />
         <Route path="/disadvantage" element={<DrugsDisAdvantage/>} />
+        <Route path="/ar" element={<Arpage/>} />
       </Routes>
     </Router>
    </>

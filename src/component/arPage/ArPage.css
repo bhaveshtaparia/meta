@@ -1,0 +1,39 @@
+
+
+.set {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(1, auto); */
+  /* gap: 20px; */
+ grid-row-gap: 30vh;
+  /* margin: 0 auto; Center the grid horizontally */
+  padding-top: 20vh;
+  justify-content: center;
+  background-color: black;
+  height: 200vh;
+  width: 100%;
+  padding-right: 20vw;
+}
+
+/* Style for each card */
+
+/* Optional: Add some styling to the cards for a better visual appearance */
+.set .img-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.set .img-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .set {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
