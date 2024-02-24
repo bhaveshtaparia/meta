@@ -20,7 +20,7 @@ function Age() {
       <form onSubmit={handleSubmit}>
       <div className='inputs'>
        <input type='number' onChange={(e)=>setAge(e.target.value)} required placeholder='Enter Your Age' />
-        <button >Let's  Start</button>
+      <button >Let's  Start</button>
       </div>
     
       

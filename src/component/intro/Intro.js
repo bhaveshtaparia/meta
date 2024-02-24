@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './intro.css';
 import { useNavigate } from 'react-router-dom';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const Intro = () => {
   const arr1 = ['first.jpeg', 'second.jpeg', 'third.jpeg', 'last.jpeg'];
@@ -31,7 +32,7 @@ const Intro = () => {
           setIsImageChanged(arr1[timer]);
           setIsTextChanged(arr2[timer]);
         }
-      }, 2000); // Change the delay (in milliseconds) according to your preference
+      }, 2500); // Change the delay (in milliseconds) according to your preference
     }
 
     return () => clearInterval(interval);
@@ -54,14 +55,15 @@ const Intro = () => {
   };
 
   return (
-    <div className="bg">
-      <div className="app-container">
-        <p className="text">{isTextChanged}</p>
+    <div className="bg " >
+      <div className="app-container ">
+      
         <img
           src={require(`../../images/${isImageChanged}`)}
           alt="Displayed"
           className="image"
         />
+          <p className="text">{isTextChanged}</p>
       </div>
       <div className='btn'>
         <button onClick={handleChange}>Next</button>

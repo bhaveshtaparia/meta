@@ -3,26 +3,40 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: top;
+    padding-top: 27vh;
     align-items: center;
     flex-direction: column;
     position: fixed;
 }
+.inputs{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 .inputs>input{
     width: 50vw;
     height: 7vh;
-    background-color: white;
-   
+    background-color: rgb(255, 255, 255);
+    border-radius: 20vw;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
 }
 .inputs>button{
     margin-top: 10px;
-    background-color: rgb(146, 255, 119);
-    color: rgb(0, 0, 0);
+    border-radius: 20vw;
+    background-color: rgb(170, 10, 10);
+    color: rgb(255, 253, 253);
     /* border: 1px solid rgb(133, 255, 121); */
     border: none;
+    margin-top: 5vh;
     height: 7vh;
+    font-size: x-large;
+    font-weight: 600;
+    width:15vw;
     transition: all 0.5s;
 }
 .inputs>button:hover{
-    background-color: rgb(80, 255, 80);
+    background-color: rgb(138, 10, 10);
 }
