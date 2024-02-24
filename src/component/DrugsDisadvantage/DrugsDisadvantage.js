@@ -143,18 +143,23 @@ function DrugsDisAdvantage() {
   return (
     <div className='bg9'>
       <div className="drugs-disadvantage-container">
-        <h1>Drug Disadvantage Quiz</h1>
-        <p>Input your query:</p>
-        <label>
-          Your Query:
-          <input
-            type="text"
-            value={userResponse}
-            onChange={(e) => setUserResponse(e.target.value)}
-          />
-        </label>
-        <button onClick={checkDisadvantage}>Send Query</button>
-        <p>{feedback}</p>
+        <div className="chat-container">
+            <div className="message">Welcome! How can I help you?</div>
+          <div className="user-input">
+            <input
+              type="text"
+              value={userResponse}
+              onChange={(e) => setUserResponse(e.target.value)}
+              placeholder="Type your message here..."
+            />
+          </div>
+        </div>
+            <button onClick={checkDisadvantage}>Send</button>
+        {/* Feedback area */}
+        <div className="feedback">
+          {/* Display feedback from AI or system here */}
+          <p>{feedback}</p>
+        </div>
       </div>
     </div>
     
