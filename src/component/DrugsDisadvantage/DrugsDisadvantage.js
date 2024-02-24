@@ -168,6 +168,7 @@ function DrugsDisAdvantage() {
 
   return (
     <div class="chat-container">
+      <p>Professor 2.0</p>
   <div class="chat-history">
 
     <div class="message bot-message">
