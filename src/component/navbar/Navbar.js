@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {useDispatch, useSelector} from 'react-redux'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import uri from '../../uri';
 import { logout } from '../../actions/authAction';
+
 function Navbar() {
-  // const username=useSelector(state=>state.auth && state.auth.user && state.auth.user.user && state.auth.user.user.name);
-  const authenticated=useSelector(state=>state.auth.isAuthenticated);
-  const dispatch=useDispatch();
-  const handleLogout=async()=>{
+  const authenticated = useSelector(state => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
+
+  const handleLogout = async () => {
     try {
       const requestOptions = {
         method: 'GET',
@@ -15,66 +16,44 @@ function Navbar() {
       };
       const response = await fetch(`${uri}/api/v1/logout`, requestOptions);
       const result = await response.json();
-      if(response.ok){
-        localStorage.removeItem('auth')
-        // alert(result.message);
+      if (response.ok) {
+        localStorage.removeItem('auth');
         dispatch(logout());
-      }else{
+      } else {
         alert(result.message);
-        // console.log(result.message);
       }
     } catch (err) {
       alert(err);
     }
+  };
 
-  }
   return (
-    <>
-    <nav className="navbar  bg-dark  bg-dark navbar-expand-lg  bg-body-tertiary" data-bs-theme="dark" >
-  <div className="container-fluid ">
-    <img src={require(`../../images/logo.jpeg`)} style={{borderRadius:15}} alt='logo'/>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/game">Game</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/disadvantage">The Professor</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/advice">Advice</Link>
-        </li>
-      </ul>
-      <form className="d-flex" role="search" onSubmit={(e)=>e.preventDefault()}>
-        {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> */}
-        
-        {authenticated? <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        {/* <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/profile">{username}</Link>
-        </li> */}
-        <button className="btn btn-outline-success" onClick={handleLogout}>Logout</button>
-        </ul>: <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link>
-        </li>
-        </ul>}
-       
-        {/* <button className="btn btn-outline-success" type="submit">Sign Up</button> */}
-      </form>
-    </div>
-  </div>
-</nav>
-    </>
-  )
+    <nav className="bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <img className="h-10 w-auto" src={require(`../../images/logo.jpeg`)} alt="logo" style={{ borderRadius: 15 }} />
+          </div>
+          <div className="hidden sm:flex sm:space-x-4">
+            <Link to='/' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link to='/game' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Game</Link>
+            <Link to='/disadvantage' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">The Professor</Link>
+            <Link to='/advice' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Advice</Link>
+          </div>
+          <div className="flex items-center">
+            {authenticated ? (
+              <button onClick={handleLogout} className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium">Logout</button>
+            ) : (
+              <div className="flex">
+                <Link to='/login' className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium">Login</Link>
+                <Link to='/signup' className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium">SignUp</Link>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
