@@ -5,8 +5,8 @@
      align-items: center;
      /* position: 0; */
      z-index: 10;
-     width: 100%;
-     height:100vh;
+     width: 100vw;
+     height:100VH;
      position: absolute;
      flex-direction: column;
      top: 0%;
@@ -18,16 +18,16 @@
         flex-direction: row;
         max-width: 100vw;
     }
-    .app-container>img{
+.app-container>img{
     border-radius: 10vw;
-    height: 90vh;
+    height: 83vh;
     width: 70vw;
     margin-left: 7vh;
 }
 .app-container>p{
     color: aliceblue;
     text-align: center;
-    font-size: 500%;
+    font-size: 300%;
     margin-top: 20vh;
     margin-left: 5vw;
     margin-right: 5vw;;
@@ -35,10 +35,10 @@
     font-family: "Teko", sans-serif;
 
 }
-.app-container>img{
+/* .app-container>img{
     width: auto;
     height: 85vh;
-}
+} */
 
 .app-container>button{
     background-color:white;
@@ -57,7 +57,7 @@
     border-radius: 10px;
     margin-top: 2vh;
     width: 15vw;
-    height:5vh;
+    height:7vh;
     margin-left:8vw;
     font-size: x-large;
     font-weight: 500;
