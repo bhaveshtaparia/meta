@@ -6,31 +6,46 @@
      /* position: 0; */
      z-index: 10;
      width: 100%;
+     height:100vh;
      position: absolute;
      flex-direction: column;
      top: 0%;
+     
     }
     .app-container{
-        margin-top: 10px;
+        margin-top: 5vh;
+        display:flex;
+        flex-direction: row;
+        max-width: 100vw;
     }
     .app-container>img{
+    border-radius: 10vw;
     height: 90vh;
     width: 70vw;
+    margin-left: 7vh;
 }
 .app-container>p{
     color: aliceblue;
     text-align: center;
+    font-size: 500%;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    margin-right: 5vw;;
+    width: 50vw;
+    font-family: "Teko", sans-serif;
+
 }
 .app-container>img{
     width: auto;
     height: 85vh;
 }
+
 .app-container>button{
     background-color:white;
-    border: 2px solid rgb(180, 180, 211);
+    border: 2vh solid rgb(180, 180, 211);
     border-radius: 5px;
     width: 7vw;
-    margin-left: 5px;
+    margin-left: 5vw;
     transition: all 0.5s;
 }
 .app-container>button:hover{
@@ -40,7 +55,13 @@
     background-color: rgb(175, 175, 255);
     border: 1px solid black;
     border-radius: 10px;
+    margin-top: 2vh;
     width: 15vw;
+    height:5vh;
+    margin-left:8vw;
+    font-size: x-large;
+    font-weight: 500;
+    
 }
 .btn>button:hover{
     background-color: rgb(143, 143, 250);
