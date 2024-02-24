@@ -14,6 +14,7 @@ import Intro from './component/intro/Intro';
 import Advice from './component/advice/Advice';
 import DrugsDisAdvantage from './component/DrugsDisadvantage/DrugsDisadvantage';
 import Arpage from './component/arPage/Arpage';
+import { Nata } from './component/Nata';
 function App() {
  
   return (

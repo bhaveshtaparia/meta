@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Home.css'; // Import your CSS file for styling
+import { Button } from '@material-tailwind/react';
 
 function Home() {
   const videoId = 'vC80KSQFCgU'; // Extract the video ID from the URL
@@ -7,6 +8,25 @@ function Home() {
 
   const iframeRef = useRef(null);
   let player;
+  useEffect(() => {
+    // Define the Tars widget script
+    const script = document.createElement("script");
+    script.id = "tars-widget-script";
+    script.type = "text/javascript";
+    script.src =
+      "https://tars-file-upload.s3.amazonaws.com/bulb/js/widget.js";
+    
+    // Append the script to the document body if it doesn't already exist
+    if (!document.getElementById("tars-widget-script")) {
+      document.body.appendChild(script);
+    }
+
+    // Define the tarsSettings object
+    window.tarsSettings = {
+      convid: "nJ6i07",
+      href: "https://chatbot.hellotars.com/conv/nJ6i07"
+    };
+  }, []); // Empty dependency array to ensure useEffect runs only once
 
   useEffect(() => {
     const iframe = iframeRef.current;
@@ -47,6 +67,7 @@ function Home() {
     }
 
     return () => {
+      <Button>Button</Button>
       if (player) {
         player.destroy();
       }
