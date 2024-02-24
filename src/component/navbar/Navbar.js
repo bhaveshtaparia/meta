@@ -45,7 +45,7 @@ function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/game">Game</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/disadvantage">Drugs Bubble</Link>
+          <Link className="nav-link active" aria-current="page" to="/disadvantage">The Professor</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/advice">Advice</Link>
