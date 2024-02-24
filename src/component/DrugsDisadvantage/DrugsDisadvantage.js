@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './DrugsDisAdvantage.css';
 const {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
 } = require("@google/generative-ai");
+
 function DrugsDisAdvantage() {
-  
   const MODEL_NAME = "gemini-1.0-pro";
-  const API_KEY = "AIzaSyCsfG9CnJ7mcO4LnBn-aj4XZD_pYTroOJI";
+  const API_KEY = "AIzaSyCsfG9CnJ7mcO4LnBn-aj4XZD_pYTroOJI"; // Replace with your actual API key
   const [userResponse, setUserResponse] = useState('');
+  const [chatHistory, setChatHistory] = useState([]);
   const [feedback, setFeedback] = useState('');
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatHistory]);
+
+  const scrollToBottom = () => {
+    chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   
-  async function runChat() {
+  async function runChat(message) {
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
   
@@ -129,40 +140,63 @@ function DrugsDisAdvantage() {
       ],
     });
   
-    const result = await chat.sendMessage(userResponse);
+    const result = await chat.sendMessage(message);
     const response = result.response;
-    setFeedback(response.text());
-    console.log(response.text());
+    return response.text();
   }
-  const checkDisadvantage=()=>{
-    runChat();
-  }
-  
+  const handleUserMessage = async () => {
+    if (userResponse.trim() === '') {
+      setFeedback("Please type something before sending.");
+      return;
+    }
 
+    const responseText = await runChat(userResponse);
+    const newMessage = { role: 'user', text: userResponse };
+    const newFeedback = { role: 'model', text: responseText };
+
+    setChatHistory([...chatHistory, newMessage, newFeedback]);
+    setUserResponse('');
+  };
+
+  const renderChatMessages = () => {
+    return chatHistory.map((message, index) => (
+      <div key={index} className={message.role === 'user' ? 'user-message' : 'bot-message'}>
+        {message.text}
+      </div>
+    ));
+  };
 
   return (
-    <div className='bg9'>
-      <div className="drugs-disadvantage-container">
-        <div className="chat-container">
-            <div className="message">Welcome! How can I help you?</div>
-          <div className="user-input">
-            <input
-              type="text"
-              value={userResponse}
-              onChange={(e) => setUserResponse(e.target.value)}
-              placeholder="Type your message here..."
-            />
-          </div>
-        </div>
-            <button onClick={checkDisadvantage}>Send</button>
-        {/* Feedback area */}
-        <div className="feedback">
-          {/* Display feedback from AI or system here */}
-          <p>{feedback}</p>
+    <div class="chat-container">
+  <div class="chat-history">
+
+    <div class="message bot-message">
+      <div class="message-content">
+        <div class="message-text">
+          {renderChatMessages()}
         </div>
       </div>
     </div>
-    
+
+    <div ref={chatEndRef}></div>
+  </div>
+  <div class="user-input">
+    <input
+      type="text"
+      value={userResponse}
+      onChange={(e) => setUserResponse(e.target.value)}
+      placeholder="Type your message here..."
+      onKeyPress={(e) => {
+        if (e.key === 'Enter') {
+          handleUserMessage();
+        }
+      }}
+    />
+    <button onClick={handleUserMessage}>Send</button>
+  </div>
+</div>
+
+
   );
 }
 
