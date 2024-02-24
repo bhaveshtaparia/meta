@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './intro.css';
 import { useNavigate } from 'react-router-dom';
-import GoogleFontLoader from 'react-google-font-loader';
+// import GoogleFontLoader from 'react-google-font-loader';
 
 const Intro = () => {
   const arr1 = ['first.jpeg', 'second.jpeg', 'third.jpeg', 'last.jpeg'];
