@@ -18,14 +18,23 @@
 }
 .user-message {
   align-self: flex-start;
-  color: blue; /* Change color to your preferred color */
+  color: black; /* Change color to your preferred color */
+  background-color: rgb(163, 250, 136);
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  display: inline-block;
+  /* margin-bottom: 20px; */
 }
 
 /* CSS for bot messages */
 .bot-message {
   align-self: flex-end;
-  padding-left: 50px;
-  color: green; /* Change color to your preferred color */
+  background-color: rgb(249, 255, 247);
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  /* display: inline-block; */
+  margin-bottom: 20px;
+  /* margin-left: 10vw; */
 }
 
 /* CSS for the user input */
@@ -34,6 +43,7 @@
   align-items: center;
   padding: 20px;
   background-color: #f0f0f0;
+  width: 90vw;
 }
 
 .user-input input[type="text"] {
@@ -52,7 +62,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 10px; /* Add spacing between input and button */
+  margin-left: 10px;
 }
 
 .user-input button:hover {
