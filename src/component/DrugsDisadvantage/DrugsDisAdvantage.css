@@ -4,7 +4,16 @@
   flex-direction: column;
   height: 90vh; /* Full height */
 }
-
+.center{
+  text-align: center;
+  font-size: large;
+  margin-top: 10px;
+}
+.center>span{
+  background-color: #86ff8a;
+  border-radius: 15px;
+  padding: 2px 12px;
+}
 /* CSS for the chat history */
 .chat-history {
   flex: 1;
