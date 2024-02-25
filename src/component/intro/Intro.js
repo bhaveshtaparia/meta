@@ -26,7 +26,7 @@ const Intro = () => {
       interval = setInterval(() => {
         if (timer >= 4) {
           setTimer(1);
-          navigate('/age');
+          navigate('/child');
         } else {
           setTimer((prevTimer) => prevTimer + 1);
           setIsImageChanged(arr1[timer]);
@@ -51,7 +51,7 @@ const Intro = () => {
 
   const handleSkip = () => {
     setAutoPlay(false); // Stop auto-play when skip is clicked
-    navigate('/age');
+    navigate('/child');
   };
 
   return (

@@ -38,7 +38,8 @@ function Navbar() {
             <Link to='/' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
             <Link to='/game' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Game</Link>
             <Link to='/disadvantage' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">The Professor</Link>
-            <Link to='/advice' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Advice</Link>
+            <Link to='/advice' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Community Forum</Link>
+            <Link to='https://antidrugconsellor.vercel.app/room/abc' className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Video Chat</Link>
           </div>
           <div className="flex items-center">
             {authenticated ? (
