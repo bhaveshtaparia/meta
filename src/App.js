@@ -15,6 +15,7 @@ import Advice from './component/advice/Advice';
 import DrugsDisAdvantage from './component/DrugsDisadvantage/DrugsDisadvantage';
 import Arpage from './component/arPage/Arpage';
 import { Nata } from './component/Nata';
+import Counselling from './component/Counselling';
 function App() {
  
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/game" element={<Intro/>} />
         <Route path="/advice" element={<Advice/>} />
+        <Route path="/counselling" element={<Counselling/>} />
         <Route path="/disadvantage" element={<DrugsDisAdvantage/>} />
         <Route path="/ar" element={<Arpage/>} />
       </Routes>
