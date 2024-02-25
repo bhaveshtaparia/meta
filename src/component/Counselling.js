@@ -9,6 +9,7 @@ import {
     Tooltip,
     IconButton,
   } from "@material-tailwind/react";
+  import './Counselling.css'
 
 const Counselling = () => {
   return (
@@ -20,8 +21,9 @@ const Counselling = () => {
             {/* First Row */}
             <Card className="w-full max-w-[26rem] shadow-lg">
                 <CardHeader floated={false} color="blue-gray">
-                    <img
-                    src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    <img 
+                    width={400}
+                    src="https://st4.depositphotos.com/1017986/21088/i/450/depositphotos_210888716-stock-photo-happy-doctor-with-clipboard-at.jpg"
                     alt="ui/ux review check"
                     />
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -44,7 +46,7 @@ const Counselling = () => {
                 <CardBody>
                     <div className="mb-3 flex items-center justify-between">
                     <Typography variant="h5" color="blue-gray" className="font-medium">
-                        Wooden House, Florida
+                        Dr. Yusuf Merchant
                     </Typography>
                     <Typography
                         color="blue-gray"
@@ -66,11 +68,11 @@ const Counselling = () => {
                     </Typography>
                     </div>
                     <Typography color="gray">
-                    Enter a freshly updated and thoughtfully furnished peaceful home
-                    surrounded by ancient trees, stone walls, and open meadows.
+                    One of the most famous Anti-Drug Promoters of India,
+                    who won Indian Excellence Award for the Best Anti-Drug Campaigners of India.
                     </Typography>
                     <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                    <Tooltip content="$129 per night">
+                    <Tooltip content="500 per session">
                         <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +172,8 @@ const Counselling = () => {
             <Card className="w-full max-w-[26rem] shadow-lg">
                 <CardHeader floated={false} color="blue-gray">
                     <img
-                    src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      height={200}
+                    src="https://t4.ftcdn.net/jpg/03/17/85/49/360_F_317854905_2idSdvi2ds3yejmk8mhvxYr1OpdVTrSM.jpg"
                     alt="ui/ux review check"
                     />
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -193,7 +196,7 @@ const Counselling = () => {
                 <CardBody>
                     <div className="mb-3 flex items-center justify-between">
                     <Typography variant="h5" color="blue-gray" className="font-medium">
-                        Wooden House, Florida
+                        Dr. Tara Banerjee
                     </Typography>
                     <Typography
                         color="blue-gray"
@@ -215,11 +218,11 @@ const Counselling = () => {
                     </Typography>
                     </div>
                     <Typography color="gray">
-                    Enter a freshly updated and thoughtfully furnished peaceful home
-                    surrounded by ancient trees, stone walls, and open meadows.
+                    A leading addiction specialist and the founder of the Hope Trust,
+                    Dr. Banerjee has dedicated her career to helping people overcome addiction.
                     </Typography>
                     <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                    <Tooltip content="$129 per night">
+                    <Tooltip content="500 per session">
                         <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -323,7 +326,7 @@ const Counselling = () => {
             <Card className="w-full max-w-[26rem] shadow-lg">
                 <CardHeader floated={false} color="blue-gray">
                     <img
-                    src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    src="https://t3.ftcdn.net/jpg/01/67/15/98/360_F_167159846_MCrwVzB7ysdZKr2vIiJkiCacEoNWagdn.jpg"
                     alt="ui/ux review check"
                     />
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -346,7 +349,7 @@ const Counselling = () => {
                 <CardBody>
                     <div className="mb-3 flex items-center justify-between">
                     <Typography variant="h5" color="blue-gray" className="font-medium">
-                        Wooden House, Florida
+                        Dr. Sanjay Nagral
                     </Typography>
                     <Typography
                         color="blue-gray"
@@ -368,11 +371,11 @@ const Counselling = () => {
                     </Typography>
                     </div>
                     <Typography color="gray">
-                    Enter a freshly updated and thoughtfully furnished peaceful home
-                    surrounded by ancient trees, stone walls, and open meadows.
+                    A prominent pediatrician and the director of the Institute for Public Health, 
+                    Dr. Nagral focuses on preventive mental healthcare and education in India.
                     </Typography>
                     <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                    <Tooltip content="$129 per night">
+                    <Tooltip content="500 per session">
                         <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -472,7 +475,7 @@ const Counselling = () => {
             <Card className="w-full max-w-[26rem] shadow-lg">
                 <CardHeader floated={false} color="blue-gray">
                     <img
-                    src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    src="https://media.istockphoto.com/id/1530248128/photo/portrait-of-cheerful-female-doctor-with-digital-tablet-beside-window-in-corridor.webp?b=1&s=170667a&w=0&k=20&c=lr9kQSJFSMXao-_XHEyTjca6fhzdoIg9lDdOL8j-kHE="
                     alt="ui/ux review check"
                     />
                     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
@@ -495,7 +498,7 @@ const Counselling = () => {
                 <CardBody>
                     <div className="mb-3 flex items-center justify-between">
                     <Typography variant="h5" color="blue-gray" className="font-medium">
-                        Wooden House, Florida
+                        Dr. Sunita Dubey
                     </Typography>
                     <Typography
                         color="blue-gray"
@@ -517,11 +520,11 @@ const Counselling = () => {
                     </Typography>
                     </div>
                     <Typography color="gray">
-                    Enter a freshly updated and thoughtfully furnished peaceful home
-                    surrounded by ancient trees, stone walls, and open meadows.
+                    A well-known psychiatrist and the president of the Indian Psychiatric Society, 
+                    Dr. Dubey advocates for evidence-based treatment and prevention strategies for drug abuse.
                     </Typography>
                     <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                    <Tooltip content="$129 per night">
+                    <Tooltip content="500 per session">
                         <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
